@@ -1,2 +1,112 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+valor = float(input('Qual o valor desejado? '))
+
+nota100 = 100
+nota50 = 50
+nota20 = 20
+nota10 = 10
+nota5 = 5
+nota2 = 2
+moeda1 = 1
+moeda50 = 0.50
+moeda25 = 0.25
+moeda10 = 0.10
+moeda5 = 0.05
+moeda01 = 0.01
+
+if valor >= 100:
+    if valor%nota100 == 0:
+        a = valor//nota100
+        print(f'Notas de 100 necessárias: {a}')
+    elif valor%nota100 != 0:
+        a = valor//nota100
+        print(f'Notas de 100 necessárias: {a} ')
+        b = valor - a*100
+        c = b//nota50
+        if c > 0:
+            print(f'Notas de 50 necessárias: {c}.')
+        d = valor - (a*100) - (c*50)
+        e = d//nota20
+        if e > 0:
+            print(f'Notas de 20 necessárias: {e}.')
+        f = valor - (a*100) - (c*50) - (e*20)
+        g = f//nota10
+        if g > 0:
+            print(f'Notas de 10 necessárias: {g}.')
+        h = valor - (a*100) - (c*50) - (e*20) - (g*10)
+        i = h//nota5
+        if i > 0:
+            print(f'Notas de 5 necessárias: {i}.')
+        j = valor - (a*100) - (c*50) - (e*20) - (g*10) - (i*5)
+        k = j//nota2
+        if k > 0:
+            print(f'Notas de 2 necessárias: {k}.')
+        l = valor - (a*100) - (c*50) - (e*20) - (g*10) - (i*5) - (k*2)
+        m = l//moeda1
+        if m > 0:
+            print(f'Moedas de 1 necessárias: {m}.')
+        n = l - (m*1)
+        o = n//moeda50
+        if o > 0:
+            print(f'Moedas de 0,50 necessárias: {o}.')
+        p = n-(o*0.50)
+        q = p//moeda25
+        if q > 0:
+            print(f'Moedas de 0,25 necessárias: {q}.')
+        r = p - (q*0.25)
+        s = r//moeda10
+        if s > 0:
+            print(f'Moedas de 0,10 necessárias: {s}.')
+        t = r - (s*0.10)
+        u = t//moeda5
+        if u > 0:
+            print(f'Moedas de 0,05 necessárias: {u}.')
+        v = t - (u*0.05)
+        x = v//moeda01
+        if x > 0:
+            print(f'Moedas de 0,01 necessárias: {x}.')
+
+else:
+    if valor % 50 != 0:
+        a = valor // nota50
+        if a > 0:
+            print(f'Notas de 50 necessárias: {a} ')
+        b = valor - a * 50
+        c = b // nota20
+        if c > 0:
+            print(f'Notas de 20 necessárias: {c}.')
+        d = valor - (a * 50) - (c * 20)
+        e = d // nota10
+        if e > 0:
+            print(f'Notas de 10 necessárias: {e}.')
+        f = valor - (a * 50) - (c * 20) - (e * 10)
+        g = f // nota5
+        if g > 0:
+            print(f'Notas de 5 necessárias: {g}.')
+        h = valor - (a * 50) - (c * 20) - (e * 10) - (g * 5)
+        i = h // nota2
+        if i > 0:
+            print(f'Notas de 2 necessárias: {i}.')
+        j = valor - (a * 50) - (c * 20) - (e * 10) - (g * 5) - (i * 2)
+        k = j // moeda1
+        if k > 0:
+            print(f'Moedas de 1 necessárias: {k}.')
+        l = j - (k * 1)
+        m = l // moeda50
+        if m > 0:
+            print(f'Moedas de 0,50 necessárias: {m}.')
+        o = l - (m * 0.50)
+        p = o // moeda25
+        if p > 0:
+            print(f'Moedas de 0,25 necessárias: {p}.')
+        q = o - (p * 0.25)
+        r = q // moeda10
+        if r > 0:
+            print(f'Moedas de 0,10 necessárias: {r}.')
+        s = q - (r * 0.10)
+        t = s // moeda5
+        if t > 0:
+            print(f'Moedas de 0,05 necessárias: {t}.')
+        u = s - (t * 0.05)
+        v = u // moeda01
+        if v > 0:
+            print(f'Moedas de 0,01 necessárias: {v+1}.')=auto
